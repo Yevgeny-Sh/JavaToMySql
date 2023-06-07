@@ -6,14 +6,19 @@ class Student {
     private String courseName;
 
 
-    public Student(String firstName, String lastName, String email) {
-        this(firstName, lastName, email, null);
-    }
     public Student(int student_id, String firstName, String lastName) {
 
         this.student_id = student_id;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public Student(String firstName, String lastName, String email) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = null;
+
     }
 
     public Student(String firstName, String lastName, String email, String courseName) {
