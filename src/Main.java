@@ -11,8 +11,9 @@ public class Main {
 
             Connection connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/myfirstdatabase", "root", "hcdbh6450");
+            System.out.println("connected to db at localhost:3306");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from student");
+            ResultSet resultSet = statement.executeQuery("select * from students");
             while (resultSet.next()) {
                 System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3));
 
@@ -21,7 +22,5 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }
